@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    body {
+      font: 1em Helvetica;
+      margin: 0;
+      padding: 0;
+    }
+
+    .button {
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.379);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: fixed;
+      display: none;
+      z-index: 1000;
+    }
+
+    .menu {
+      background-color: white;
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      padding-top: 25px;
+      transition: 0.3s;
+      left: -254px;
+      z-index: 1001;
+    }
+
+    .menu a {
+      display: block;
+      text-decoration: none;
+      padding: 20px;
+      color: black;
+    }
+
+    .menu a:hover {
+      background-color: rgb(143, 143, 143);
+    }
+
+    .menu.active {
+      left: 0;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      background-color: white;
+      padding: 20px;
+    }
+
+    .header .logo {
+      margin-left: 230px;
+      text-decoration: none;
+      color: #222;
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-weight: 600;
+
+    }
+
+    .top-header {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+
+    .a {
+      font-size: 20px;
+      color: black;
+    }
+
+    .icon {
+      display: flex;
+      gap: 10px;
+    }
+
+    .timKiem input {
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="top-header">hilo</div>
+
+  <div class="header">
+    <span class="button" onclick="showMenu()">☰</span>
+    <a href="/public/index.html" class="logo">LEESIN</a>
+    <div class="icon">
+      <div class="timKiem"> <input type="text" placeholder="Tìm kiếm sản phẩm"></div>
+      <a href="/public/html/card.html" class="a" id="cardIcon"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="/public/html/SignIn.html" class="a"><i class="fa-regular fa-user"></i></a>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="showMenu()"></div>
+
+  <div class="menu" id="menu">
+    <a href="/public/index.html">Trang chủ</a>
+    <a href="/public/html/product.html">Sản phẩm</a>
+    <a href="/public/html/card.html">Giỏ hàng</a>
+    <a href="/public/html/SignIn.html">Đăng nhập</a>
+
+  </div>
+
+  <div id="loadCard"></div>
+
+  <script>
+    function showMenu() {
+      document.querySelector("#menu").classList.toggle("active");
+      document.querySelector("#overlay").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

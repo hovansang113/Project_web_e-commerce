@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/public/css/card.css">
+    <title>Giỏ hàng</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <h1>Giỏ Hàng Của Bạn</h1>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Mô tả</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thanh toán</th>
+                    <th>Xóa</th>
+                </tr>
+            </thead>
+            <tbody class="cart-items" id="card-items"></tbody>
+        </table>
+
+        <div class="cart-summary">
+            <strong>Tổng cộng: </strong><span id="cart-total"></span>
+        </div>
+
+        <div class="cart-actions">
+            <button class="btn btn-checkout" id="checkout">Thanh Toán</button>
+        </div>
+    </div>
+
+    <div class="orderTracking" id="prderTracking">
+        <div class="top">
+            <h4>Đơn hàng của bạn</h4>
+            <button class="btn_filter" id="processing_btn">Đang xử lý</button>
+            <button class="btn_filter" id="shipping_btn">Đang giao</button>
+            <button class="btn_filter" id="delivered_btn">Đã giao</button>
+        </div>
+        <div class="bottom">
+            <table class="order">
+                <thead> 
+                    <tr>
+                        <td>Sản Phẩm</td>
+                        <td>Thông tin</td>
+                        <td>Đơn Giá</td>
+                        <td>Số Lương</td>
+                        <td>Thành tiền</td>
+                    </tr>
+                </thead>
+                <tbody class="cart-order" id="cart-order"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+    <script>
+        $("#header").load("../../src/component/header.html");
+        $("#footer").load("../../src/component/footer.html");
+    </script>
+    <script src="/public/js/card.js"></script>
+</body>
+
+</html>

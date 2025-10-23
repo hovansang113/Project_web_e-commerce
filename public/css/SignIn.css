@@ -1,0 +1,91 @@
+/* ===== Toàn trang ===== */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f8fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== Đường kẻ phân cách ===== */
+.line {
+  background-color: #222;
+  height: 2px;
+}
+
+/* ===== Vùng chứa chính ===== */
+.auth-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* ===== Hộp form ===== */
+.form-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-box:hover {
+  transform: translateY(-3px);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== Input ===== */
+input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  border-color: #131314;
+  outline: none;
+}
+
+/* ===== Button ===== */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #131314;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #131314;
+  border: 1px solid #131314;
+}
+
+/* ===== Liên kết ===== */
+a {
+  color: #131314;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #555;
+}

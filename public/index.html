@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>LESSIN</title>
+</head>
+
+<body>
+    <!-- phần này dùng để chứa header -->
+    <header id="header"></header>
+    <div class="content1">
+        <img src="/public/image/1home.jpg" alt="">
+        <button class="btn"><a href="/public/html/product.html">Xem sản phẩm</a></button>
+    </div>
+    <h3>MẪU SẢN PHẨM</h3>
+    <div id="product-best" class="product-best"></div>
+    <div class="content2">
+        <video src="/public/video/quicktime.mov" controls autoplay muted loop></video>
+        <div class="anni">Tình yêu và màu sắc tạo nên thương hiệu của chúng tôi hãy đến đây và thay đổi phong cách của
+            bạn</div>
+    </div>
+    <!-- phần này dùng để chứa footer -->
+    <footer id="footer"></footer>
+    <script>
+        $("#header").load("../src/component/header.html", function () {
+            // Code gắn tìm kiếm giống index.html để header hoạt động đồng bộ
+            const searchInput = document.querySelector('input[type="text"]');
+            const searchButton = document.querySelector('button i.fa-solid.fa-magnifying-glass');
+
+            if (searchInput) {
+                searchInput.addEventListener("keypress", function (event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        const keyword = searchInput.value.trim();
+                        if (keyword !== "") {
+                            window.location.href = `/public/html/product.html?search=${encodeURIComponent(keyword)}`;
+                        }
+                    }
+                });
+            }
+
+            if (searchButton) {
+                searchButton.addEventListener("click", function () {
+                    const keyword = searchInput.value.trim();
+                    if (keyword !== "") {
+                        window.location.href = `/public/html/product.html?search=${encodeURIComponent(keyword)}`;
+                    }
+                });
+            }
+        });
+
+        $("#footer").load("../src/component/footer.html");
+    </script>
+    <script src="/public/home.js"></script>
+    <script src="/public/js/product.js"></script>
+</body>
+
+</html>

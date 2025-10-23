@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng quản trị</title>
+    <link rel="stylesheet" href="/public/css/admin.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul>
+            <li class="item-nav"><a href="#">Quản lý sản phẩm</a></li>
+            <li class="item-nav"><a href="#">Quản lý user</a></li>
+            <li class="item-nav"><a href="#">Quản lý đơn hàng</a></li>
+        </ul>
+        <ul>
+            <button class="logOut" id="logout">đăng xuất</button>
+        </ul>
+    </aside>
+
+    <!-- Nội dung chính -->
+    <section>
+        <!-- Bảng sản phẩm -->
+        <div class="table-header">
+            <h3>Quản lý sản phẩm</h3>
+            <button id="addItem">Thêm sản phẩm</button>
+        </div>
+        <table class="table-light">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Loại</th>
+                    <th>Giá</th>
+                    <th>số lượng</th>
+                    <th>Hình ảnh</th>
+                    <th>Mô tả</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- sản phẩm -->
+            </tbody>
+        </table>
+
+        <!-- Bảng user -->
+        <div class="table-header">
+            <h3>Quản lý user</h3>
+        </div>
+        <table class="table-light">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên tài khoản</th>
+                    <th>Số điện thoại</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- user -->
+            </tbody>
+        </table>
+
+        <!-- Bảng đơn hàng -->
+        <div class="table-header">
+            <h3>Quản lý đơn hàng</h3>
+        </div>
+        <table class="table-light">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product_ID</th>
+                    <th>User_ID</th>
+                    <th>Số lượng</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="orderTableBody">
+                <!-- đơn hàng -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Form thêm sản phẩm -->
+    <div class="modal-body" id="modal-body">
+        <div class="addProduct">
+            <div class="title">
+                <h2>Thêm sản phẩm</h2>
+            </div>
+            <form id="addProductForm">
+                <input type="text" placeholder="Nhập tên sản phẩm" id="addProductName" required>
+                <label>Phân loại:</label>
+                <input type="text" id="addProductCategory" placeholder="Nhập loại sản phẩm (áo/quần)" required>
+
+                <input type="number" placeholder="nhập số lượng" id="addQuantity" required>
+                <input type="text" placeholder="URL ảnh sản phẩm" id="addProductImg" required>
+                <textarea placeholder="Thêm mô tả sản phẩm" id="addDisciption" required></textarea>
+                <input type="number" placeholder="Nhập giá sản phẩm" id="addProductPrice" required>
+                <div>
+                    <button type="submit" id="submit">Thêm</button>
+                    <button type="button" id="outForm">Thoát</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/public/js/admin.js"></script>
+</body>
+</html>

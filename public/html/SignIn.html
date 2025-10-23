@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/public/css/SignIn.css">
+    <title>Đăng nhập / Đăng ký</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="line">.</div>
+    <div class="auth-container">
+        <!-- Đăng nhập -->
+        <div class="form-box" id="login-box">
+            <h2>Đăng nhập</h2>
+            <input type="text" id="loginUsername" placeholder="Tên đăng nhập">
+            <input type="password" id="loginPassword" placeholder="Mật khẩu">
+            <button id="loginBtn">Đăng nhập</button>
+            <p>Chưa có tài khoản? <a href="#" id="showRegister">Đăng ký</a></p>
+        </div>
+
+        <!-- Đăng ký -->
+        <div class="form-box hidden" id="register-box">
+            <h2>Đăng ký</h2>
+            <input type="text" id="regUsername" placeholder="Tên đăng nhập">
+            <input type="text" id="regPhone" placeholder="Số điện thoại">
+            <input type="password" id="regPassword1" placeholder="Nhập mật khẩu">
+            <input type="password" id="regPassword" placeholder="Nhập lại mật khẩu">
+            <button id="registerBtn">Lưu thông tin đăng ký</button>
+            <p>Đã có tài khoản? <a href="#" id="showLogin">Đăng nhập</a></p>
+        </div>
+
+        <!-- Đăng xuất -->
+        <div class="form-box hidden" id="logout-box">
+            <h2>Xin chào, <span id="currentUser"></span>!</h2>
+            <button id="logoutBtn">Đăng xuất</button>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+
+    <script src="/public/js/signIn.js"></script>
+    <script>
+        $("#header").load("../../src/component/header.html");
+        $("#footer").load("../../src/component/footer.html");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    font: 1em Helvetica;
+}
+
+.content1 {
+  position: relative;
+  width: 100%;
+}
+
+.content1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content1 button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.content1 button:hover {
+  background: black;
+  color: white;
+}
+
+.content1 button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.content2{
+  display: flex;
+  gap: 50px ;
+  margin-top: 50px;
+}
+.content2 div{
+  font-size: 40px;
+}
+
+.content2 video{
+    width: 50%;
+    height: auto;
+}
+
+.product-best{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 220px;
+  gap: 10px;
+  justify-content: stretch;
+  animation: animate 10s linear infinite;
+}
+/* --- Căn bản --- */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h3 {
+  text-align:left;
+  margin: 40px 0 20px;
+}
+
+/* --- Hiệu ứng cuộn tròn liên tục --- */
+.product-best {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  padding: 20px 0;
+}
+
+.product-best .scroll-content {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 30s linear infinite;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  text-align: center;
+  margin: 0 40px;
+}
+
+.product-card img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Dừng khi hover
+.product-best:hover .scroll-content {
+  animation-play-state: paused;
+} */
+
+
+.product-best img{
+  width: 460px;
+}
+
+.anni {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 2.5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

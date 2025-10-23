@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/productDetails.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Details</title>
+</head>
+<body>
+    <!-- phần header ở đây -->
+    <header id="header"></header>
+    <div class="line">.</div>
+    <div id="productDetails" class="Details"></div>
+    <script src="../js/detail.js"></script>
+
+    <!-- phần footer ở đây -->
+    <footer id="footer"></footer>
+
+    <script>
+        $("#header").load("../../src/component/header.html");
+        $("#footer").load("../../src/component/footer.html");
+    </script>
+</body>
+</html>

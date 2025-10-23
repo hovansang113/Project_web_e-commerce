@@ -1,0 +1,40 @@
+.T-shirts {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 220px;
+    margin-left: 30px;
+}
+
+.T-shirts .product-item img {
+    width: 460px;
+    transition: transform 0.7s ease;
+}
+
+.trouse {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 220px;
+    margin-left: 50px;
+}
+
+.trouse .product-item img {
+    width: 460px;
+    transition: transform 0.7s ease;
+}
+
+.line {
+    background-color: black;
+    height: 1px;
+    margin-bottom: 20px;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.product-item{
+    border: 1px solid rgb(185, 185, 185);
+}
+.product-name{
+    margin-bottom: 20px;
+}

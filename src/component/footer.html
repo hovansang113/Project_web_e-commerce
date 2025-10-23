@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Toàn trang */
+body {
+  font: 1em Helvetica;  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Nền xám tổng thể giống hình */
+}
+/* Khung trắng chính */
+.container {
+  background-color: #fff;
+  border-top: 1px solid #000000;
+  margin-top: 50px;
+  width: 100%;
+  padding: 40px 60px;
+  box-sizing: border-box; /* đảm bảo padding không làm vượt khung */
+}
+
+/* Logo Leesin nằm ở góc trái trên cùng */
+.firts {
+  font-weight: 800;
+  font-size: 22px;
+  color: #111;
+  background-color: #f2f2f2; /* nền xám nhạt cho chữ LEESIN */
+  display: inline-block; /* giúp ô ôm sát chữ */
+  padding: 4px 8px;
+  margin: 0 0 20px 0; /* cách dưới 20px để tách khỏi nội dung */
+  letter-spacing: 1px;
+}
+/* Phần chứa 3 cột nội dung */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 250px; /* khoảng cách giữa các cột */
+}
+/* Các cột nội dung */
+.section {
+  flex: 1;
+}
+.section h2 {
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.section p {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="firts">LEESIN</h1>
+
+        <div class="content">
+            <div class="section">
+                <h2>Liên hệ</h2>
+                <p>Hotline: 0912102272</p>
+                <p>Email: sangsang939393@gmail.com</p>
+            </div>
+
+            <div class="section">
+                <h2>Cửa hàng</h2>
+                <p>CS1: PNV</p>
+                <p>CS2: Cao Đẳng Đà Nẵng - 99 Tô Hiến Thành - Phước Mỹ - Sơn Trà - Đà Nẵng</p>
+                <p>CS3: Mỹ Khê 3 - Phước Mỹ - Sơn Trà - Đà Nẵng</p>
+            </div>
+
+            <div class="section">
+                <h2>Thành viên</h2>
+                <p>Hồ Văn Sang</p>
+                <p>Nguyễn Phúc Khuê</p>
+                <p>Đoàn Công Việt</p>
+                <p>Hồ Thị Bèng</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

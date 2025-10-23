@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/payMent.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Thanh toán</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/public/index.html"><h3 class="h3">LEESIN</h3></a>
+    </header>
+
+  <div class="checkout">
+    <div class="inform">
+      <h3>Thông tin giao hàng</h3>
+      <input type="text" placeholder="Nhập họ tên" id="namePay">
+      <input type="number" placeholder="Nhập số điện thoại" id="phonePay">
+      <input type="text" placeholder="Địa chỉ" id="addressPay">
+      <textarea id="notePay" placeholder="Ghi chú"></textarea>
+      <button class="order">Thanh Toán</button>
+
+      <label>
+        <input type="radio" name="shipping" value="standard" checked>
+        Giao hàng tiêu chuẩn
+      </label>
+
+      <label>
+        <input type="radio" name="shipping" value="express">
+        Thanh toán bằng MOMO
+      </label>
+    </div>
+
+    <div class="overallProduct">
+      <h3>Tổng quát đơn hàng</h3>
+      <div id="overallProduct"></div>
+      <div class="total-section">
+        <strong>Tổng cộng:</strong> <span id="total-payment">0 VND</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- phần thanh toán thành công đặt ở đây -->
+  <div id="backup" style="display: none;">
+    <div class="success-box">
+      <h2>Thanh toán thành công</h2>
+      <p>Cảm ơn bạn đã mua hàng tại <strong>LEESIN</strong> </p>
+      <button id="okBtn">OK</button>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+  <script>
+        $("#footer").load("../../src/component/footer.html");
+  </script>
+  <script src="/public/js/payment.js"></script>
+</body>
+</html>

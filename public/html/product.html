@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/public/css/product.css">
+    <title>Product</title>
+</head>
+<body>
+    <!-- lưu header ở đây -->
+    <header id="header"></header>
+    <div class="line">.</div>
+    <select name="" id="filter-category">
+        <option value="Tất cả">Tất cả</option>
+        <option value="Áo">Áo</option>
+        <option value="Quần">Quần</option>
+    </select>
+
+    <div class="section" >
+        <h3>ÁO LESSIN</h3>
+        <div id="T-shirts" class="T-shirts"></div>
+        <h3>QUẦN LESSIN</h3>
+        <div id="trouse" class="trouse"></div>
+
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script>
+        $("#header").load("../../src/component/header.html");
+        $("#footer").load("../../src/component/footer.html");
+    </script>
+    <script src="/public/js/product.js"></script>
+</body>
+</html>
