@@ -151,8 +151,8 @@ if (payBtn) {
         <p><strong>Địa chỉ:</strong> ${address}</p>
         <p><strong>Sản phẩm đã mua:</strong></p>
         ${selected.map(item => `
-          <div>
-            <img src="${item.img}" alt="${item.name}" width="60" height="60" style="object-fit:cover; border-radius:6px;">
+          <div class="box">
+            <img src="${item.img}" alt="${item.name}" width="60" height="60" style="object-fit:cover; border-radius:6px;" class = "anhto">
             <span>${item.name} - ${item.price.toLocaleString("vi-VN")} VND x ${item.quantity}</span>
           </div>
         `).join("")}

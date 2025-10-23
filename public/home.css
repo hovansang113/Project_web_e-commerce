@@ -111,11 +111,13 @@ h3 {
   }
 }
 
-/* Dừng khi hover
-.product-best:hover .scroll-content {
-  animation-play-state: paused;
-} */
-
+.abc a button{
+  margin-top: 10%;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.871);
+  color: white;
+  cursor: pointer;
+}
 
 .product-best img{
   width: 460px;

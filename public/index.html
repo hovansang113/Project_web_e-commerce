@@ -25,8 +25,10 @@
     <div id="product-best" class="product-best"></div>
     <div class="content2">
         <video src="/public/video/quicktime.mov" controls autoplay muted loop></video>
-        <div class="anni">Tình yêu và màu sắc tạo nên thương hiệu của chúng tôi hãy đến đây và thay đổi phong cách của
-            bạn</div>
+        <div class="abc">
+            <div class="anni">Tình yêu và màu sắc tạo nên thương hiệu của chúng tôi hãy đến đây và thay đổi phong cách củabạn</div>
+            <a href="/public/html/product.html"><button>TÌM HIỂU THÊM</button></a>
+        </div>
     </div>
     <!-- phần này dùng để chứa footer -->
     <footer id="footer"></footer>
@@ -34,8 +36,6 @@
         $("#header").load("../src/component/header.html", function () {
             // Code gắn tìm kiếm giống index.html để header hoạt động đồng bộ
             const searchInput = document.querySelector('input[type="text"]');
-            const searchButton = document.querySelector('button i.fa-solid.fa-magnifying-glass');
-
             if (searchInput) {
                 searchInput.addEventListener("keypress", function (event) {
                     if (event.key === "Enter") {
@@ -44,15 +44,6 @@
                         if (keyword !== "") {
                             window.location.href = `/public/html/product.html?search=${encodeURIComponent(keyword)}`;
                         }
-                    }
-                });
-            }
-
-            if (searchButton) {
-                searchButton.addEventListener("click", function () {
-                    const keyword = searchInput.value.trim();
-                    if (keyword !== "") {
-                        window.location.href = `/public/html/product.html?search=${encodeURIComponent(keyword)}`;
                     }
                 });
             }

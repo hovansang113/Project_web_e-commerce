@@ -1,4 +1,4 @@
-// ==== Lấy các phần tử ====
+// Lấy các phần tử 
 const loginBox = document.getElementById("login-box");
 const registerBox = document.getElementById("register-box");
 const logoutBox = document.getElementById("logout-box");
@@ -11,7 +11,7 @@ const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
 const currentUser = document.getElementById("currentUser");
 
-// ==== Hiện / Ẩn form ====
+// xử lý phần ẩn hiện form
 showRegister.addEventListener("click", (e) => {
   e.preventDefault();
   loginBox.classList.add("hidden");
@@ -24,10 +24,10 @@ showLogin.addEventListener("click", (e) => {
   loginBox.classList.remove("hidden");
 });
 
-// ==== Lấy danh sách user trong localStorage ====
+// Lấy danh sách user trong localStorage 
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
-// ==== Đăng ký ====
+// Đăng ký 
 registerBtn.addEventListener("click", () => {
   const username = document.getElementById("regUsername").value.trim();
   const phone = document.getElementById("regPhone").value.trim();

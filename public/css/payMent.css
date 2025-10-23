@@ -90,7 +90,7 @@ img {
 
 #backup{
     border: 1px solid black;
-    padding: 300px;
+    padding: 400px;
 }
 .ok-btn{
     background-color: black;
@@ -107,4 +107,15 @@ img {
 .success-box{
     border: 1px solid black;
     padding: 10px 50px;
+    margin-left: 30%;
+}
+
+.anhto{
+    width: 300px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

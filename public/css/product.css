@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     flex: 1 1 220px;
     margin-left: 30px;
+    margin-top: 30px;
 }
 
 .T-shirts .product-item img {
@@ -15,6 +16,7 @@
     flex-wrap: wrap;
     flex: 1 1 220px;
     margin-left: 50px;
+    margin-top: 30px;
 }
 
 .trouse .product-item img {
@@ -37,4 +39,14 @@ img:hover {
 }
 .product-name{
     margin-bottom: 20px;
+}
+
+.quan{
+    margin-top: 50px;
+}
+
+.filter{
+    background-color: black;
+    color: white;
+    padding: 5px 21px;
 }

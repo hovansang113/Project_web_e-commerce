@@ -14,7 +14,7 @@ fetch(apiUrl)
     // Kiểm tra nếu có từ khóa search trong URL
     filterProductsBySearch();
 
-    // Lọc theo danh mục (Tất cả / Áo / Quần)
+    // Lọc theo danh mục Tất cả  Áo / Quần)
     $("select").on("change", function () {
       const selected = $(this).val();
 
@@ -31,7 +31,7 @@ fetch(apiUrl)
   .catch(error => console.log("Lỗi khi tải dữ liệu:", error));
 
 
-// ✅ Hàm hiển thị sản phẩm ra giao diện
+//  Hàm hiển thị sản phẩm ra giao diện
 function renderProducts(products) {
   const shirtList = $("#T-shirts");
   const trouse = $("#trouse");
