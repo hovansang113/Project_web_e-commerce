@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/public/css/SignIn.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "iG3G3Ou8kgRvV4Bzs",
+            });
+        })();
+    </script>
     <title>Đăng nhập / Đăng ký</title>
 </head>
 
@@ -20,6 +29,7 @@
             <input type="password" id="loginPassword" placeholder="Mật khẩu">
             <button id="loginBtn">Đăng nhập</button>
             <p>Chưa có tài khoản? <a href="#" id="showRegister">Đăng ký</a></p>
+            <p><a href="#" id="showforgetEmail">Quên mật khẩu</a></p>
         </div>
 
         <!-- Đăng ký -->
@@ -27,11 +37,21 @@
             <h2>Đăng ký</h2>
             <input type="text" id="regUsername" placeholder="Tên đăng nhập">
             <input type="text" id="regPhone" placeholder="Số điện thoại">
+            <input type="email" id="regEmail" placeholder="Email">
             <input type="password" id="regPassword1" placeholder="Nhập mật khẩu">
             <input type="password" id="regPassword" placeholder="Nhập lại mật khẩu">
             <button id="registerBtn">Lưu thông tin đăng ký</button>
             <p>Đã có tài khoản? <a href="#" id="showLogin">Đăng nhập</a></p>
         </div>
+
+        <!-- phần quên mật khẩu -->
+        <div class="form-box hidden" id="forget-box">
+            <h2>Quên mật khẩu</h2>
+            <input type="email" id="forgetEmail" placeholder="Nhập email đã đăng ký" required>
+            <button id="forgetSendBtn">Gửi</button>
+            <p><a href="#" id="backToLogin">Quay lại đăng nhập</a></p>
+        </div>
+
 
         <!-- Đăng xuất -->
         <div class="form-box hidden" id="logout-box">

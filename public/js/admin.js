@@ -154,6 +154,7 @@ function renderUser() {
       <tr>
         <td>${index + 1}</td>
         <td>${data.username}</td>
+        <td>${data.email}</td>
         <td>${data.phone}</td>
         <td>${data.password}</td>
         <td><button class="btn-delete" data-index="${index}">Xóa</button></td>
