@@ -149,29 +149,47 @@ let users = JSON.parse(localStorage.getItem("users")) || [];
 
 function renderUser() {
   listUser.innerHTML = "";
+
   users.forEach((data, index) => {
+    const isBlocked = data.blocked === true; // kiểm tra trạng thái chặn
+
     listUser.innerHTML += `
-      <tr>
+      <tr style="${isBlocked ? 'opacity: 0.6; background: #f8d7da;' : ''}">
         <td>${index + 1}</td>
         <td>${data.username}</td>
         <td>${data.email}</td>
         <td>${data.phone}</td>
         <td>${data.password}</td>
-        <td><button class="btn-delete" data-index="${index}">Xóa</button></td>
+        <td>
+          <button 
+            class="btn-toggle-block" 
+            data-index="${index}" 
+            style="background-color: ${isBlocked ? '#000000ff' : '#000000ff'}; color: white; border: none; padding: 10px 10px; ;">
+            ${isBlocked ? 'Mở chặn' : 'Chặn'}
+          </button>
+        </td>
       </tr>
     `;
   });
 
-  document.querySelectorAll(".btn-delete").forEach(btn => {
+  // Xử lý nút chặn / mở chặn
+  document.querySelectorAll(".btn-toggle-block").forEach(btn => {
     btn.addEventListener("click", e => {
       const i = e.target.dataset.index;
-      users.splice(i, 1);
+      // Đảo trạng thái "blocked"
+      users[i].blocked = !users[i].blocked;
+
+      // Lưu lại vào localStorage
       localStorage.setItem("users", JSON.stringify(users));
+
+      // Cập nhật lại bảng
       renderUser();
     });
   });
 }
+
 renderUser();
+
 
 //xử lý phàn quảng lý đơn hàng
 const orderTableBody = document.querySelector("#orderTableBody");
