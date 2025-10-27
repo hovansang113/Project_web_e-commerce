@@ -129,6 +129,10 @@ h3 {
   animation: fadeUp 2.5s ease-out forwards;
 }
 
+.hihi{
+  margin-left: 30px;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;

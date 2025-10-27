@@ -18,6 +18,8 @@ fetch(apiUrl)
       const productCard = `
         <div class="product-card">
           <img src="${items.img}" alt="${items.name}">
+          <div>${items.name}</div>
+
         </div>
       `;
       scrollContent.innerHTML += productCard;

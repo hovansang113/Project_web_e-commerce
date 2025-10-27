@@ -91,7 +91,7 @@ fetch(`${apiUrl}/${productID}`)
     document.querySelector(".btn-add").addEventListener("click", (e) => {
       e.preventDefault();
 
-      const currentUser = localStorage.getItem("currenUser");
+      const currentUser = localStorage.getItem("currentUser");
       if(!currentUser){
         alert("vui lòng đăng nhập để thêm giỏ hàng");
         return;

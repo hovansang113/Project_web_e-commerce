@@ -70,7 +70,7 @@ function filterProductsBySearch() {
   if (searchKeyword) {
     const products = document.querySelectorAll(".product-item");
     let matchCount = 0;
-
+``
     products.forEach(product => {
       const name = product.querySelector(".product-name").textContent.toLowerCase();
       if (!name.includes(searchKeyword)) {

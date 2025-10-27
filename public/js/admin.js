@@ -36,7 +36,7 @@ outForm.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-// ✅ sửa lỗi cú pháp ở đây (thiếu cặp ngoặc tròn)
+//  sửa lỗi cú pháp ở đây (thiếu cặp ngoặc tròn)
 function fetchProduct() {
 // Hàm gọi API GET để lấy tất cả sản phẩm và hiển thị lên bảng
   fetch(apiUrl)

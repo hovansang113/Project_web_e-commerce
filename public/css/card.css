@@ -42,7 +42,7 @@ h1 {
 }
 
 .btn-remove {
-  background-color: #171313;
+  background-color: #000000;
   color: white;
   border: none;
   padding: 6px 10px;
@@ -68,7 +68,7 @@ h1 {
 .btn {
   padding: 10px 20px;
   border: none;
-  background-color: #151111;
+  background-color: #000000;
   color: white;
   border-radius: 4px;
   cursor: pointer;

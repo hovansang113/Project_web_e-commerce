@@ -1,0 +1,20 @@
+:root{
+  --bg: #ffffff;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #06b6d4;
+  --accent-from: #06b6d4;
+  --accent-to: #7c3aed;
+  --radius: 12px;
+  --gap: 1rem;
+  --shadow-sm: 0 4px 10px rgba(2,6,23,0.06);
+  --shadow-md: 0 14px 40px rgba(2,6,23,0.12);
+  --transition: 260ms cubic-bezier(.2,.9,.3,1);
+}
+[data-theme="dark"]{
+  --bg:#071022;
+  --card:#0d1a2a;
+  --text:#e6eef8;
+  --muted:#9aa6b2;
+}

@@ -65,7 +65,21 @@
 
     <footer id="footer"></footer>
     <script>
-        $("#header").load("../../src/component/header.html");
+        $("#header").load("../../src/component/header.html",  function () {
+            // Code gắn tìm kiếm giống index.html để header hoạt động đồng bộ
+            const searchInput = document.querySelector('input[type="text"]');
+            if (searchInput) {
+                searchInput.addEventListener("keypress", function (event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        const keyword = searchInput.value.trim();
+                        if (keyword !== "") {
+                            window.location.href = `/public/html/product.html?search=${encodeURIComponent(keyword)}`;
+                        }
+                    }
+                });
+            }
+        });
         $("#footer").load("../../src/component/footer.html");
     </script>
     <script src="/public/js/card.js"></script>

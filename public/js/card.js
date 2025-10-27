@@ -1,4 +1,4 @@
-// ========== GIỎ HÀNG ==========
+//  GIỎ HÀNG 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartTotal = document.querySelector("#cart-total");
