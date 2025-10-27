@@ -1,5 +1,4 @@
 const apiUrl = "https://68dddcedd7b591b4b78db934.mockapi.io/product";
-
 fetch(apiUrl)
   .then(response => response.json())
   .then(data => {

@@ -154,7 +154,7 @@ function renderUser() {
     const isBlocked = data.blocked === true; // kiểm tra trạng thái chặn
 
     listUser.innerHTML += `
-      <tr style="${isBlocked ? 'opacity: 0.6; background: #f8d7da;' : ''}">
+      <tr style="${isBlocked ? 'opacity: 0.6; background: #ff0000ff;' : ''}">
         <td>${index + 1}</td>
         <td>${data.username}</td>
         <td>${data.email}</td>

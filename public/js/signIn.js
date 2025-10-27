@@ -15,8 +15,7 @@ const logoutBtn = document.getElementById("logoutBtn");
 const forgetSendBtn = document.getElementById("forgetSendBtn");
 const currentUser = document.getElementById("currentUser");
 
-// ===== Xử lý ẩn/hiện form =====
-
+//xử lý ẩn hiện form
 // Chuyển sang form Đăng ký
 showRegister.addEventListener("click", (e) => {
   e.preventDefault();
@@ -86,6 +85,8 @@ registerBtn.addEventListener("click", () => {
 
   // Gửi email bằng EmailJS
   const templateParams = { name: username, email: email };
+  console.log(templateParams);
+  
   emailjs.send("service_03w9j3g", "template_objk4fc", templateParams)
     .then(response => {
       console.log("Email sent:", response.status, response.text);
@@ -101,7 +102,7 @@ registerBtn.addEventListener("click", () => {
   loginBox.classList.remove("hidden");
 });
 
-// ===== Đăng nhập =====
+// xử lý phần Đăng nhập 
 loginBtn.addEventListener("click", () => {
   const username = document.getElementById("loginUsername").value.trim();
   const password = document.getElementById("loginPassword").value.trim();
@@ -112,25 +113,33 @@ loginBtn.addEventListener("click", () => {
     return;
   }
 
+
   if (!username || !password) {
     alert("Vui lòng nhập đầy đủ thông tin!");
     return;
   }
 
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  const user = users.find((u) => u.username === username && u.password === password);
 
+
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.username === username && u.password === password);
   if (!user) {
     alert("Sai tên đăng nhập hoặc mật khẩu!");
     return;
   }
+
+  if (user.blocked) {
+    alert("Tài khoản của bạn đã bị chặn. Vui lòng liên hệ quản trị viên!");
+    return;
+  }
+
 
   alert("Đăng nhập thành công!");
   window.location.href = "../index.html";
   localStorage.setItem("currentUser", username);
 });
 
-// ===== Đăng xuất =====
+// xử lý phần Đăng xuất 
 logoutBtn.addEventListener("click", () => {
   const username = localStorage.getItem("currentUser");
   if (username) {
@@ -141,7 +150,7 @@ logoutBtn.addEventListener("click", () => {
   loginBox.classList.remove("hidden");
 });
 
-// ===== Kiểm tra trạng thái đăng nhập =====
+// xử lý Kiểm tra trạng thái đăng nhập 
 window.addEventListener("load", () => {
   const username = localStorage.getItem("currentUser");
   if (username) {
