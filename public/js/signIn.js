@@ -50,7 +50,7 @@ backToLogin.addEventListener("click", (e) => {
 // ===== Danh sách user =====
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
-// ===== Đăng ký =====
+// xử lý phần Đăng ký
 registerBtn.addEventListener("click", () => {
   const username = document.getElementById("regUsername").value.trim();
   const phone = document.getElementById("regPhone").value.trim();
@@ -139,7 +139,7 @@ loginBtn.addEventListener("click", () => {
   localStorage.setItem("currentUser", username);
 });
 
-// xử lý phần Đăng xuất 
+// xử lý phần Đăng xuất   
 logoutBtn.addEventListener("click", () => {
   const username = localStorage.getItem("currentUser");
   if (username) {
@@ -186,4 +186,4 @@ forgetSendBtn.addEventListener('click', (e) => {
       console.error("Email error:", error);
       alert("Gửi email thất bại. Vui lòng thử lại sau!");
     });
-})
+});

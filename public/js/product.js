@@ -82,8 +82,9 @@ function filterProductsBySearch() {
     if (matchCount === 0) {
       const container = document.querySelector("#T-shirts") || document.querySelector("#trouse");
       if (container) {
-        container.innerHTML = `<p style="color:red; text-align:center;">Không tìm thấy sản phẩm phù hợp với từ khóa "${searchKeyword}"</p>`;
+        container.innerHTML = `<p style="color:red; text- align:center;">Không tìm thấy sản phẩm phù hợp với từ khóa "${searchKeyword}"</p>`;
       }
     }
   }
 }
+

@@ -97,7 +97,7 @@ fetch(`${apiUrl}/${productID}`)
       return;
     }
 
-    const quantity = parseInt(quantityInput.value);
+    const quantity = parseInt(quantityInput.value);3
     const added = addToCart(quantity);
 
     if (added) {

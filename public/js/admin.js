@@ -164,7 +164,7 @@ function renderUser() {
           <button 
             class="btn-toggle-block" 
             data-index="${index}" 
-            style="background-color: ${isBlocked ? '#000000ff' : '#000000ff'}; color: white; border: none; padding: 10px 10px; ;">
+            style="background-color: ${isBlocked ? '#000000ff' : '#070000ff'}; color: white; border: none; padding: 10px 10px; ;">
             ${isBlocked ? 'Mở chặn' : 'Chặn'}
           </button>
         </td>
@@ -191,6 +191,7 @@ function renderUser() {
 renderUser();
 
 
+
 //xử lý phàn quảng lý đơn hàng
 const orderTableBody = document.querySelector("#orderTableBody");
 let order = JSON.parse(localStorage.getItem("orders")) || [];
@@ -203,7 +204,8 @@ function renderOrders() {
     const item = data.items && data.items[0];
     const itemId = item ? item.id : "";
     const quantity = item ? item.quantity : 0;
-    const status = data.status || "preparing"; 
+    const status = data.status || "preparing";                                      
+
 
     orderTableBody.innerHTML += `
       <tr>
